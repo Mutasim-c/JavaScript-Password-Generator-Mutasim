@@ -14,16 +14,33 @@ function generatePassword() {
     alert("please enter a valid number");
     return null;
   };
-  
+  var elegibleChar = []
   var lowerCase = confirm("Do you want lower case characters in you password?");
+  if(lowerCase){
+    elegibleChar = elegibleChar.concat(lowerCaseCharacters);
+    console.log(elegibleChar);
+  };
   var upperCase = confirm("Do you want upper case characters in you password?");
+  if(upperCase){
+    elegibleChar = elegibleChar.concat(upperCaseCharacters);
+    console.log(elegibleChar);
+  };
   var numeric = confirm("Do you want your password to contain numbers?");
+  if(numeric){
+    elegibleChar = elegibleChar.concat(numberList);
+    console.log(elegibleChar);
+  };
   var specialChar = confirm("Do you want you password to contain special characters?");
+  if(specialChar){
+    elegibleChar = elegibleChar.concat(specialCharacters);
+    console.log(elegibleChar);
+  };
 
   if(!lowerCase && !upperCase && !numeric && !specialChar){
     alert("You have chosen no character types");
     return null;
   }
+
   return specialCharacters.slice(0,5);
 }
 
