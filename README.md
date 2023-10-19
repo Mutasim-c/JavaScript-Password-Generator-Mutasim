@@ -9,4 +9,4 @@ This website generates a password using multiple prompts that is asks the user. 
 https://mutasim-c.github.io/JavaScript-Password-Generator-Mutasim/
 
 ## Screenshots
-![page run](./img/chrome-capture-2023-10-19.gif)
+![page run](./img/chrome-capture-2023-10-19%20(1).gif)
