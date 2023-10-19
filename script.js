@@ -7,13 +7,23 @@ var numberList = ["1","2","3","4","5","6","7","8","9","0"]
 
 var specialCharacters = ["'","\\","\""," ","!","#","$","%","&","(",")","*","+",",","-",".","/",":",";","<","=",">","?","@","[","]","^","_","`","{","|","}","~"];
 // " ' \
-console.log(specialCharacters.slice(0,5))
+
 function generatePassword() {
   var lengthPassword = prompt("How long do you want your password to be (8-128 characters)?" , "length");
+  if(isNaN(lengthPassword)|| lengthPassword>128||lengthPassword<8){
+    alert("please enter a valid number");
+    return null;
+  };
+  
   var lowerCase = confirm("Do you want lower case characters in you password?");
   var upperCase = confirm("Do you want upper case characters in you password?");
   var numeric = confirm("Do you want your password to contain numbers?");
   var specialChar = confirm("Do you want you password to contain special characters?");
+
+  if(!lowerCase && !upperCase && !numeric && !specialChar){
+    alert("You have chosen no character types");
+    return null;
+  }
   return specialCharacters.slice(0,5);
 }
 
